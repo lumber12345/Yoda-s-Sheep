@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0B0E11;
+    color: #E6EDF3;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom Tactical Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0E11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222A34;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #303B49;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: rgba(248, 81, 73, 0.7);
+    box-shadow: 0 0 12px rgba(248, 81, 73, 0.25);
+  }
+  50% {
+    border-color: rgba(248, 81, 73, 0.2);
+    box-shadow: 0 0 2px rgba(248, 81, 73, 0.05);
+  }
+}
+
+.chain-critical {
+  animation: pulse-border 1.4s infinite ease-in-out;
+}

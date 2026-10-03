@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: yodas-sheep-torn-command
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
